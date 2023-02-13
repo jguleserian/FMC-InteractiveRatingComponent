@@ -1,0 +1,299 @@
+/*-----RESET & VARIABLES-----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    /*---Color Pallet---*/
+    --Orange: #fb7413;
+    --White: #ffffff;
+    --LightGrey: #959eac;
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: #252d37;
+    --VeryDarkBlue: #121417;
+    font-family: 'Overpass', sans-serif;
+    font-size: 62.5%;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    max-width: 144rem;
+    height: 100vh;
+    max-height: 80rem;
+    font-size: 1.5rem;
+    color: var(--White);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-----CONTAINERS (HTML order)-----*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80rem;
+    width: 144rem;
+    background-color: var(--VeryDarkBlue);
+}
+
+div.container {
+    width: 41.2rem;
+    min-height: 41.6rem;
+    background-image: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+    border-radius: 3rem;
+}
+
+
+/*---RATING Section start---*/
+
+section.rating {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    padding: 3.1rem 3.9rem 3rem 3rem;
+}
+
+form.numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 2.4rem;
+}
+
+fieldset {
+    display: flex;
+    justify-content: space-between;
+    height: 5.1rem;
+    width: 34.1rem;
+    border: none;
+}
+
+button.circle,
+div.circled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.1rem;
+    width: 5.1rem;
+    border: none;
+    background-color: var(--DarkBlue);
+    font-size: 1.6rem;
+    color: var(--LightGrey);
+    border-radius: 50%;
+}
+
+.activated {
+    background-color: var(--Orange) !important;
+    color: var(--White) !important;
+    cursor: pointer;
+}
+
+button.circle:hover {
+    background-color: var(--LightGrey);
+    color: white;
+    cursor: pointer;
+}
+
+button.circle:active {
+    background-color: var(--Orange);
+    cursor: pointer;
+    color: var(--White)
+}
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 144rem;
+}
+
+
+/*---RATING Section end
+/*---THANK YOU Section start---*/
+
+section.thanks {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4.5rem 0 4.5rem 0;
+}
+
+
+/*---THANK YOU Section end---*/
+
+
+/*-----ELEMENTS & IDs (alpha order)-----*/
+
+
+/*---Typography---*/
+
+h2 {
+    text-align: left;
+    margin-top: 3.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 3.545rem;
+}
+
+h2.thank-you {
+    margin-top: 3.9rem;
+    margin-bottom: 1.2rem;
+}
+
+p.appreciate {
+    width: 34rem;
+    text-align: center;
+    color: var(--LightGrey);
+    line-height: 2.4rem;
+}
+
+p.inquiry {
+    width: 34rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: var(--LightGrey);
+}
+
+p.selected {
+    text-align: center;
+    width: 19.3rem;
+    height: 1.5rem;
+    margin-top: 3.2rem;
+    padding-top: .6rem;
+    padding-bottom: 1.1rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    background-color: var(--DarkBlue);
+    border-radius: 2.25rem;
+    color: var(--Orange);
+}
+
+button.commit {
+    display: inline-block;
+    width: 34.1rem;
+    height: 4.5rem;
+    margin-top: 3.2rem;
+    background-color: var(--Orange);
+    color: var(--White);
+    text-transform: uppercase;
+    border-radius: 22.5px;
+    border: none;
+    font-weight: 700;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+    cursor: pointer;
+}
+
+
+/*-----CLASSES (alpha order)-----*/
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 11px;
+    text-align: center;
+    color: var(--LightGrey);
+}
+
+.attribution a {
+    color: var(--Orange);
+}
+
+.sc-only {
+    display: none;
+    position: absolute;
+    left: -3000px;
+}
+
+
+/*-----Media Queries-----*/
+
+@media screen and (max-width: 375px) {
+    main {
+        height: 66.7rem;
+        width: 37.5rem;
+    }
+    div.container {
+        width: 32.7rem;
+        min-height: 36rem;
+        border-radius: 1.5rem;
+    }
+    /*---RATING Section-----*/
+    section.rating {
+        padding: 2.3rem 2.2rem 3.2rem 2.4rem;
+    }
+    img.star {
+        width: 1.4rem
+    }
+    button.circle,
+    div.circled {
+        height: 4rem;
+        width: 4rem;
+        font-size: 1.4rem;
+    }
+    h2 {
+        margin-top: 1.9rem;
+        font-size: 2.4rem;
+        line-height: 3.545rem;
+        margin-bottom: 1rem;
+    }
+    p.inquiry {
+        width: 27.9rem;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+    fieldset {
+        width: 28.1rem;
+        height: 4.2rem;
+    }
+    button.commit {
+        width: 27.9rem;
+        margin-top: 2.2rem;
+    }
+    /*---THANK YOU Section-----*/
+    section.thanks {
+        padding: 3.4rem 0 3.3rem 0;
+    }
+    img.feedback {
+        width: 14.4rem;
+    }
+    p.selected {
+        width: 16.8rem;
+        margin-top: 2.4rem;
+        font-size: 1.4rem;
+    }
+    h2.thank-you {
+        margin-top: 3rem;
+        margin-bottom: 1.3rem;
+        line-height: 3.038rem;
+    }
+    p.appreciate {
+        width: 27.9rem;
+        line-height: 2.2rem;
+        font-size: 1.4rem;
+    }
+}
