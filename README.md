@@ -49,7 +49,7 @@ Personal challenges:
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/jguleserian/FMC-InteractiveRatingComponent.git)
-- Live Site URL: [GitHub Pages](https://jguleserian/github.com/FMC-InteractiveRatingComponent/)
+- Live Site URL: [GitHub Pages](https://jguleserian.github.io/FMC-InteractiveRatingComponent/)
 
 ## My process
 
